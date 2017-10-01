@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var GoogleBannerView: GADBannerView!
+       
 
     @IBOutlet weak var thcInput: UITextField!
     @IBOutlet weak var weightInput: UITextField!
@@ -23,6 +27,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        GoogleBannerView.adUnitID = "ca-app-pub-3940256099942544/6300978111"
+        GoogleBannerView.rootViewController = self
+        GoogleBannerView.load(GADRequest())
         // Do any additional setup after loading the view, typically from a nib.
      }
     
