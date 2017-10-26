@@ -25,6 +25,7 @@
 		D07E6BC71F8196440009A822 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D07E6BC61F8196440009A822 /* SystemConfiguration.framework */; };
 		D07E6BC91F81973B0009A822 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D07E6BC81F81973B0009A822 /* GoogleMobileAds.framework */; };
 		D07E6BCA1F8197680009A822 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D07E6BB21F8195EF0009A822 /* GoogleMobileAds.framework */; };
+		D0A735581FA19CBC0091F93B /* MaxLengthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A735571FA19CBC0091F93B /* MaxLengthTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		D07E6BC41F81963C0009A822 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		D07E6BC61F8196440009A822 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D07E6BC81F81973B0009A822 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "SDKs/GoogleMobileAdsSdkiOS-7.24.1/GoogleMobileAds.framework"; sourceTree = "<group>"; };
+		D0A735571FA19CBC0091F93B /* MaxLengthTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaxLengthTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				D0231AE11F79E7BB004DBD1C /* Assets.xcassets */,
 				D0231AE31F79E7BB004DBD1C /* LaunchScreen.storyboard */,
 				D0231AE61F79E7BB004DBD1C /* Info.plist */,
+				D0A735571FA19CBC0091F93B /* MaxLengthTextField.swift */,
 			);
 			path = edibleThcCalculator;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0A735581FA19CBC0091F93B /* MaxLengthTextField.swift in Sources */,
 				D0231ADD1F79E7BB004DBD1C /* ViewController.swift in Sources */,
 				D07C27B21F7C62F50064E5ED /* PopUpViewController.swift in Sources */,
 				D0231ADB1F79E7BB004DBD1C /* AppDelegate.swift in Sources */,

@@ -11,6 +11,20 @@ import GoogleMobileAds
 
 class ViewController: UIViewController {
     
+    func createAlert (title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        //creating a button
+        alert.addAction(UIAlertAction(title: "yes", style: UIAlertActionStyle.default, handler: { (action) in alert.dismiss(animated: true, completion: nil)
+            print("yes")
+        }))
+        
+        alert.addAction(UIAlertAction(title: "no", style: UIAlertActionStyle.default, handler: { (action) in alert.dismiss(animated: true, completion: nil)
+            print("no")
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     @IBOutlet weak var GoogleBannerView: GADBannerView!
        
 
@@ -32,6 +46,12 @@ class ViewController: UIViewController {
         GoogleBannerView.load(GADRequest())
         // Do any additional setup after loading the view, typically from a nib.
      }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        createAlert(title: "Are you 21 or over?", message: "-")
+    }
+    
+    
     
     @IBAction func showPopUp(_ sender: UIButton) {
         let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "popUpId") as! PopUpViewController
