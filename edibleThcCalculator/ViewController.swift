@@ -9,7 +9,7 @@
 import UIKit
 import GoogleMobileAds
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     func createAlert (title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
@@ -41,6 +41,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //disssapearing text field input
+        //TODO add the rest of the inputs (probably)
+        self.thcInput.delegate = self
+        
+        
         GoogleBannerView.adUnitID = "ca-app-pub-3940256099942544/6300978111"
         GoogleBannerView.rootViewController = self
         GoogleBannerView.load(GADRequest())
@@ -126,6 +132,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+//Hide keyboard when user touches outside keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }
 
