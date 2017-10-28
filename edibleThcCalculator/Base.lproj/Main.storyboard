@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Futura.ttc">
+            <string>Futura-Bold</string>
+            <string>Futura-CondensedExtraBold</string>
+            <string>Futura-CondensedMedium</string>
+            <string>Futura-Medium</string>
+            <string>Futura-MediumItalic</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -22,191 +28,226 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOj-8n-OyR">
-                                <rect key="frame" x="103" y="323.5" width="168" height="78.5"/>
-                                <color key="backgroundColor" red="1" green="0.94960220740000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Calculate">
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="calculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S9J-fu-KET"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGt-xy-T6r">
-                                <rect key="frame" x="6" y="7" width="30" height="55"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <state key="normal" title="?">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="showPopUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M6d-79-njv"/>
-                                </connections>
-                            </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="71" minValue="1" maxValue="99" translatesAutoresizingMaskIntoConstraints="NO" id="aCv-Vi-NDM">
-                                <rect key="frame" x="31" y="270.5" width="313" height="31"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="LXF-PG-dzd">
+                                <rect key="frame" x="0.0" y="15" width="667" height="360"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="J6H-I7-zce">
+                                        <rect key="frame" x="318.5" y="0.0" width="30" height="34"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGt-xy-T6r">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="34"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
+                                                <state key="normal" title="?">
+                                                    <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="showPopUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M6d-79-njv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="xGt-xy-T6r" secondAttribute="bottom" constant="5" id="atW-qI-pLS"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="E0q-vd-65W">
+                                        <rect key="frame" x="50" y="41" width="567" height="33.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="thc" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPA-WJ-1rh">
+                                                <rect key="frame" x="0.0" y="0.0" width="283.5" height="33.5"/>
+                                                <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="QDh-sx-Ybp">
+                                                <rect key="frame" x="283.5" y="0.0" width="283.5" height="33.5"/>
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="-- " textAlignment="center" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Qqh-y9-azD" customClass="MaxLengthTextField" customModule="edibleThcCalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="250" height="33.5"/>
+                                                        <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="20"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                                <integer key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    %" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6f-39-oJJ">
+                                                        <rect key="frame" x="257" y="0.0" width="26.5" height="33.5"/>
+                                                        <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="13"/>
+                                                        <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cPy-xi-3Qy">
+                                        <rect key="frame" x="50" y="81.5" width="567" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="weight" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMd-kc-OFi">
+                                                <rect key="frame" x="0.0" y="0.0" width="283.5" height="34"/>
+                                                <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UHI-hY-S6u">
+                                                <rect key="frame" x="283.5" y="0.0" width="283.5" height="34"/>
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="--" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VqZ-ks-l37" customClass="MaxLengthTextField" customModule="edibleThcCalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="248.5" height="34"/>
+                                                        <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="20"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                                <integer key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   (g)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Aa-OH-C1b">
+                                                        <rect key="frame" x="256.5" y="0.0" width="27" height="34"/>
+                                                        <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="12"/>
+                                                        <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bKL-7a-vDT">
+                                        <rect key="frame" x="50" y="122.5" width="567" height="33.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mg's per unit" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9m3-Mo-T7E">
+                                                <rect key="frame" x="0.0" y="0.0" width="283.5" height="33.5"/>
+                                                <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="s41-w7-0PB">
+                                                <rect key="frame" x="283.5" y="0.0" width="283.5" height="33.5"/>
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="--" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tgi-be-sCw" customClass="MaxLengthTextField" customModule="edibleThcCalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="249.5" height="33.5"/>
+                                                        <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="20"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                                <integer key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" (mg)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mgg-NJ-P16">
+                                                        <rect key="frame" x="254.5" y="0.0" width="29" height="33.5"/>
+                                                        <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="12"/>
+                                                        <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="q0X-XP-zpH">
+                                        <rect key="frame" x="50" y="163" width="567" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="conversion factor" lineBreakMode="characterWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TbC-3I-IRE">
+                                                <rect key="frame" x="0.0" y="0.0" width="283.5" height="34"/>
+                                                <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="71.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAj-UX-RcN">
+                                                <rect key="frame" x="283.5" y="0.0" width="283.5" height="34"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.5"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ifd-Pc-E12">
+                                        <rect key="frame" x="50" y="204" width="567" height="33.5"/>
+                                        <subviews>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="71" minValue="1" maxValue="99" translatesAutoresizingMaskIntoConstraints="NO" id="aCv-Vi-NDM">
+                                                <rect key="frame" x="-2" y="0.0" width="571" height="34.5"/>
+                                                <connections>
+                                                    <action selector="slider:" destination="BYZ-38-t0r" eventType="valueChanged" id="Y49-Yp-S9h"/>
+                                                </connections>
+                                            </slider>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CtK-US-CNY">
+                                        <rect key="frame" x="50" y="244.5" width="567" height="34"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOj-8n-OyR">
+                                                <rect key="frame" x="0.0" y="0.0" width="567" height="34"/>
+                                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="27"/>
+                                                <state key="normal" title="Calculate">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="calculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S9J-fu-KET"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EyO-vB-pTF">
+                                        <rect key="frame" x="287.5" y="285.5" width="92" height="33.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMk-Y8-Lot">
+                                                <rect key="frame" x="0.0" y="0.0" width="92" height="33.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="LMk-Y8-Lot" secondAttribute="height" multiplier="27:10" id="2JU-iT-QXD"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="73k-I2-uNI">
+                                        <rect key="frame" x="0.0" y="326" width="667" height="34"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GEW-ba-wW2" customClass="GADBannerView">
+                                                <rect key="frame" x="0.0" y="0.0" width="667" height="34"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="GEW-ba-wW2" secondAttribute="height" multiplier="32:5" id="mID-LY-xzW"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Mna-aN-SAP"/>
+                                    <constraint firstAttribute="trailing" secondItem="ifd-Pc-E12" secondAttribute="trailing" constant="50" id="0NP-Z6-w5K"/>
+                                    <constraint firstItem="bKL-7a-vDT" firstAttribute="leading" secondItem="LXF-PG-dzd" secondAttribute="leading" constant="50" id="4gx-kp-Ej3"/>
+                                    <constraint firstItem="E0q-vd-65W" firstAttribute="leading" secondItem="LXF-PG-dzd" secondAttribute="leading" constant="50" id="4qv-aj-2pS"/>
+                                    <constraint firstAttribute="trailing" secondItem="bKL-7a-vDT" secondAttribute="trailing" constant="50" id="5C8-Ts-hfE"/>
+                                    <constraint firstAttribute="trailing" secondItem="73k-I2-uNI" secondAttribute="trailing" id="NRE-uk-Dh5"/>
+                                    <constraint firstItem="cPy-xi-3Qy" firstAttribute="leading" secondItem="LXF-PG-dzd" secondAttribute="leading" constant="50" id="PbV-ae-KND"/>
+                                    <constraint firstAttribute="trailing" secondItem="q0X-XP-zpH" secondAttribute="trailing" constant="50" id="SMC-TI-zbd"/>
+                                    <constraint firstItem="CtK-US-CNY" firstAttribute="leading" secondItem="LXF-PG-dzd" secondAttribute="leading" constant="50" id="aPV-Ic-gTM"/>
+                                    <constraint firstAttribute="trailing" secondItem="E0q-vd-65W" secondAttribute="trailing" constant="50" id="bqc-rg-CPc"/>
+                                    <constraint firstAttribute="trailing" secondItem="cPy-xi-3Qy" secondAttribute="trailing" constant="50" id="dTq-kP-N7p"/>
+                                    <constraint firstItem="73k-I2-uNI" firstAttribute="leading" secondItem="LXF-PG-dzd" secondAttribute="leading" id="dii-R3-SjX"/>
+                                    <constraint firstItem="q0X-XP-zpH" firstAttribute="leading" secondItem="LXF-PG-dzd" secondAttribute="leading" constant="50" id="jDq-Gw-PrY"/>
+                                    <constraint firstItem="ifd-Pc-E12" firstAttribute="leading" secondItem="LXF-PG-dzd" secondAttribute="leading" constant="50" id="tf0-oq-03J"/>
+                                    <constraint firstAttribute="trailing" secondItem="CtK-US-CNY" secondAttribute="trailing" constant="50" id="ySR-XD-KOv"/>
                                 </constraints>
-                                <connections>
-                                    <action selector="slider:" destination="BYZ-38-t0r" eventType="valueChanged" id="Y49-Yp-S9h"/>
-                                </connections>
-                            </slider>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="--" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tgi-be-sCw" customClass="MaxLengthTextField" customModule="edibleThcCalculator" customModuleProvider="target">
-                                <rect key="frame" x="199" y="179" width="72" height="37"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="-- " textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qqh-y9-azD" customClass="MaxLengthTextField" customModule="edibleThcCalculator" customModuleProvider="target">
-                                <rect key="frame" x="215" y="63" width="57" height="29"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="71.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAj-UX-RcN">
-                                <rect key="frame" x="238.5" y="242" width="42" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="42" id="O68-fb-VQa"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="--" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VqZ-ks-l37" customClass="MaxLengthTextField" customModule="edibleThcCalculator" customModuleProvider="target">
-                                <rect key="frame" x="217" y="110" width="54" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="54" id="0Zy-k3-cWc"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="thc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPA-WJ-1rh">
-                                <rect key="frame" x="83" y="65" width="28" height="22"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6f-39-oJJ">
-                                <rect key="frame" x="280" y="66" width="19" height="22"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(g)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Aa-OH-C1b">
-                                <rect key="frame" x="276" y="108" width="32" height="32"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(mg)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mgg-NJ-P16">
-                                <rect key="frame" x="276" y="185" width="44" height="24"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMd-kc-OFi">
-                                <rect key="frame" x="53" y="113" width="58" height="22"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="desired mg's per unit" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9m3-Mo-T7E">
-                                <rect key="frame" x="-7" y="165" width="118" height="44"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="conversion factor" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TbC-3I-IRE">
-                                <rect key="frame" x="13" y="231" width="98" height="43"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GEW-ba-wW2" customClass="GADBannerView">
-                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="GEW-ba-wW2" secondAttribute="height" multiplier="32:5" id="Adw-Lj-d9H"/>
-                                    <constraint firstAttribute="height" constant="50" id="VWn-xb-MVk"/>
-                                    <constraint firstAttribute="width" constant="320" id="gdR-YV-rhR"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMk-Y8-Lot">
-                                <rect key="frame" x="10" y="435" width="294" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="hSb-PF-twv"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="TbC-3I-IRE" firstAttribute="firstBaseline" secondItem="AAj-UX-RcN" secondAttribute="firstBaseline" id="0NW-vd-xUi"/>
-                            <constraint firstItem="aCv-Vi-NDM" firstAttribute="top" secondItem="TbC-3I-IRE" secondAttribute="bottom" constant="8" symbolic="YES" id="0V6-9l-DDo"/>
-                            <constraint firstItem="Mgg-NJ-P16" firstAttribute="trailing" secondItem="GEW-ba-wW2" secondAttribute="trailing" id="0X0-r8-xd2"/>
-                            <constraint firstItem="Qqh-y9-azD" firstAttribute="centerX" secondItem="VqZ-ks-l37" secondAttribute="centerX" id="2Z0-3m-2FT"/>
-                            <constraint firstItem="iOj-8n-OyR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="87" id="3bA-Vg-MIB"/>
-                            <constraint firstItem="aCv-Vi-NDM" firstAttribute="centerX" secondItem="iOj-8n-OyR" secondAttribute="centerX" id="4Ii-8f-P4X"/>
-                            <constraint firstItem="zMd-kc-OFi" firstAttribute="centerY" secondItem="VqZ-ks-l37" secondAttribute="centerY" id="4fR-za-qz6"/>
-                            <constraint firstItem="9m3-Mo-T7E" firstAttribute="top" secondItem="zMd-kc-OFi" secondAttribute="bottom" constant="30" id="4qG-A2-Mee"/>
-                            <constraint firstItem="a6f-39-oJJ" firstAttribute="baseline" secondItem="xPA-WJ-1rh" secondAttribute="firstBaseline" id="5HR-FG-MD1"/>
-                            <constraint firstItem="GEW-ba-wW2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="90u-O8-uSK"/>
-                            <constraint firstItem="TbC-3I-IRE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-3" id="9bq-pu-EBe"/>
-                            <constraint firstItem="Qqh-y9-azD" firstAttribute="centerY" secondItem="a6f-39-oJJ" secondAttribute="centerY" id="BNH-8V-yph"/>
-                            <constraint firstItem="VqZ-ks-l37" firstAttribute="centerY" secondItem="7Aa-OH-C1b" secondAttribute="centerY" id="BqQ-og-oWh"/>
-                            <constraint firstItem="GEW-ba-wW2" firstAttribute="top" secondItem="LMk-Y8-Lot" secondAttribute="bottom" constant="41" id="D3J-z5-j0y"/>
-                            <constraint firstItem="LMk-Y8-Lot" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="EBf-Vf-i8j"/>
-                            <constraint firstItem="Tgi-be-sCw" firstAttribute="top" secondItem="VqZ-ks-l37" secondAttribute="bottom" constant="40" id="ICv-WP-orC"/>
-                            <constraint firstItem="iOj-8n-OyR" firstAttribute="top" secondItem="aCv-Vi-NDM" secondAttribute="bottom" constant="23" id="J69-u4-cmT"/>
-                            <constraint firstItem="7Aa-OH-C1b" firstAttribute="leading" secondItem="Mgg-NJ-P16" secondAttribute="leading" id="JA8-sJ-wXi"/>
-                            <constraint firstItem="AAj-UX-RcN" firstAttribute="top" secondItem="Tgi-be-sCw" secondAttribute="bottom" constant="26" id="JVW-sT-hXf"/>
-                            <constraint firstItem="Tgi-be-sCw" firstAttribute="trailing" secondItem="iOj-8n-OyR" secondAttribute="trailing" id="Kn2-a1-k2l"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="LMk-Y8-Lot" secondAttribute="trailing" constant="-33" id="MJo-Q7-xXv"/>
-                            <constraint firstItem="VqZ-ks-l37" firstAttribute="trailing" secondItem="Tgi-be-sCw" secondAttribute="trailing" id="N1G-c4-Gtr"/>
-                            <constraint firstItem="7Aa-OH-C1b" firstAttribute="leading" secondItem="VqZ-ks-l37" secondAttribute="trailing" constant="5" id="Nkn-xb-CBg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="7Aa-OH-C1b" secondAttribute="trailing" constant="-4" id="PFj-WP-bMq"/>
-                            <constraint firstItem="xPA-WJ-1rh" firstAttribute="trailing" secondItem="zMd-kc-OFi" secondAttribute="trailing" id="PrK-iP-BPx"/>
-                            <constraint firstItem="Qqh-y9-azD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="43" id="Qfg-Pu-rgr"/>
-                            <constraint firstItem="xPA-WJ-1rh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="45" id="QoI-Hv-sGF"/>
-                            <constraint firstItem="a6f-39-oJJ" firstAttribute="leading" secondItem="Qqh-y9-azD" secondAttribute="trailing" constant="8" symbolic="YES" id="R22-bg-kax"/>
-                            <constraint firstItem="Tgi-be-sCw" firstAttribute="centerY" secondItem="Mgg-NJ-P16" secondAttribute="centerY" id="VYu-At-tqD"/>
-                            <constraint firstItem="zMd-kc-OFi" firstAttribute="top" secondItem="xPA-WJ-1rh" secondAttribute="bottom" constant="26" id="WS3-un-Fxy"/>
-                            <constraint firstItem="TbC-3I-IRE" firstAttribute="top" secondItem="9m3-Mo-T7E" secondAttribute="bottom" constant="32" id="Wl1-nN-qWe"/>
-                            <constraint firstItem="GEW-ba-wW2" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="YeI-qf-qt6"/>
-                            <constraint firstItem="7Aa-OH-C1b" firstAttribute="top" secondItem="a6f-39-oJJ" secondAttribute="bottom" constant="20" id="c6m-mz-HtA"/>
-                            <constraint firstItem="AAj-UX-RcN" firstAttribute="leading" secondItem="TbC-3I-IRE" secondAttribute="trailing" constant="78" id="fUE-hY-dss"/>
-                            <constraint firstItem="aCv-Vi-NDM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="17" id="hMN-9A-2rW"/>
-                            <constraint firstItem="xGt-xy-T6r" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="7" id="p7k-o4-RHh"/>
-                            <constraint firstItem="zMd-kc-OFi" firstAttribute="trailing" secondItem="9m3-Mo-T7E" secondAttribute="trailing" id="pCI-A3-Brg"/>
-                            <constraint firstItem="xGt-xy-T6r" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-10" id="pgM-KB-CwC"/>
-                            <constraint firstItem="VqZ-ks-l37" firstAttribute="top" secondItem="Qqh-y9-azD" secondAttribute="bottom" constant="18" id="sfT-CJ-h39"/>
-                            <constraint firstItem="LMk-Y8-Lot" firstAttribute="top" secondItem="iOj-8n-OyR" secondAttribute="bottom" constant="30" id="she-Lr-tli"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="a6f-39-oJJ" secondAttribute="trailing" constant="5" id="t7Z-Md-D5L"/>
-                            <constraint firstItem="Tgi-be-sCw" firstAttribute="leading" secondItem="9m3-Mo-T7E" secondAttribute="trailing" constant="88" id="tcj-hE-DeM"/>
-                            <constraint firstItem="9m3-Mo-T7E" firstAttribute="bottom" secondItem="Mgg-NJ-P16" secondAttribute="bottom" id="x54-CK-RxI"/>
-                            <constraint firstItem="9m3-Mo-T7E" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-23" id="yWL-SY-dra"/>
-                            <constraint firstItem="zMd-kc-OFi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="37" id="zSX-hs-fTD"/>
+                            <constraint firstAttribute="bottom" secondItem="LXF-PG-dzd" secondAttribute="bottom" id="4px-bG-VV9"/>
+                            <constraint firstItem="LXF-PG-dzd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="15" id="9Up-YG-FEs"/>
+                            <constraint firstAttribute="trailing" secondItem="LXF-PG-dzd" secondAttribute="trailing" id="IyP-X9-b9x"/>
+                            <constraint firstItem="LXF-PG-dzd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ObZ-de-wOb"/>
                         </constraints>
                     </view>
                     <connections>
@@ -231,34 +272,52 @@
                         <viewControllerLayoutGuide type="bottom" id="BWM-qw-Hp7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="NNX-7L-QI1">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aWo-Gi-w7G">
-                                <rect key="frame" x="-27" y="-47" width="375" height="626"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aWo-Gi-w7G">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNe-wn-zv8">
-                                        <rect key="frame" x="168" y="538" width="39" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Close"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSW-3D-f2j">
+                                        <rect key="frame" x="30" y="50" width="607" height="135"/>
+                                        <mutableString key="text">This calculator does not take into account decarboxylation loss. The advertised THC in flower sold in dispensaries already takes that into account (thc + (thca * .87)). What they dont account for, and why I added a "conversion factor". is that on average only 70% of thca will convert to thc. On top of that when infusing coconut oil, butter, everclear, etc a percentage of the decarbed thc will be left behind no matter how thorough your technique. Using the conversion factor, a control (edible bought from dispensary)(or do your own lab testing) and some trial runs you should be able to hone in on the conversion rate for your individual processes. Remember the difference between fun and science, is writing things down</mutableString>
+                                        <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="16"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNe-wn-zv8">
+                                        <rect key="frame" x="90" y="225" width="487" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="maW-Ug-ymS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="17"/>
+                                        <state key="normal" title="CLOSE">
+                                            <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="closePopUp:" destination="L0D-XD-rXO" eventType="touchUpInside" id="sss-Pp-3sc"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSW-3D-f2j">
-                                        <rect key="frame" x="42" y="73" width="290" height="463"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <string key="text">This calculator does not take into account decarboxylation loss. The advertised THC in flower sold in dispensaries already takes that into account (thc + (thca * .87)). What they dont account for, and why I added a "conversion factor". is that on average only 70% of thca will convert to thc. On top of that when infusing coconut oil, butter, everclear, etc a percentage of the decarbed thc will be left behind no matter how thorough your technique. Using the conversion factor, a control (edible bought from dispensary)(or do your own lab testing) and some trial runs you should be able to hone in on the conversion rate for your individual processes. Remember the difference between fun, and sciene, is writing things down</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.94960220740000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="pSW-3D-f2j" firstAttribute="top" secondItem="aWo-Gi-w7G" secondAttribute="top" constant="50" id="0xo-wZ-6QG"/>
+                                    <constraint firstItem="fNe-wn-zv8" firstAttribute="top" secondItem="pSW-3D-f2j" secondAttribute="bottom" constant="40" id="9AA-lo-BKl"/>
+                                    <constraint firstAttribute="trailing" secondItem="fNe-wn-zv8" secondAttribute="trailing" constant="90" id="KzF-DK-lvP"/>
+                                    <constraint firstItem="fNe-wn-zv8" firstAttribute="leading" secondItem="aWo-Gi-w7G" secondAttribute="leading" constant="90" id="nZe-RF-O6s"/>
+                                    <constraint firstAttribute="trailing" secondItem="pSW-3D-f2j" secondAttribute="trailing" constant="30" id="ugi-pw-Vsc"/>
+                                    <constraint firstItem="pSW-3D-f2j" firstAttribute="leading" secondItem="aWo-Gi-w7G" secondAttribute="leading" constant="30" id="yLh-4U-4kh"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aWo-Gi-w7G" firstAttribute="top" secondItem="NNX-7L-QI1" secondAttribute="top" id="Ckw-Zu-9Xb"/>
+                            <constraint firstAttribute="trailing" secondItem="aWo-Gi-w7G" secondAttribute="trailing" id="Ic3-cw-FyY"/>
+                            <constraint firstItem="aWo-Gi-w7G" firstAttribute="leading" secondItem="NNX-7L-QI1" secondAttribute="leading" id="f46-J8-dWe"/>
+                            <constraint firstAttribute="bottom" secondItem="aWo-Gi-w7G" secondAttribute="bottom" id="fFc-3D-Pom"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z9u-k3-cKe" userLabel="First Responder" sceneMemberID="firstResponder"/>

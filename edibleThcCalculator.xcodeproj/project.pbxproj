@@ -158,6 +158,7 @@
 				TargetAttributes = {
 					D0231AD61F79E7BB004DBD1C = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 6SFM579B5E;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -324,6 +325,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6SFM579B5E;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SDKs\\ copy/GoogleMobileAdsSdkiOS-7.24.1",
@@ -342,6 +344,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6SFM579B5E;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SDKs\\ copy/GoogleMobileAdsSdkiOS-7.24.1",
