@@ -36,11 +36,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var lossFactorLabel: UILabel!
     @IBAction func slider(_ sender: UISlider) {
         lossFactorLabel.text = String(Int(sender.value))
+        //TODO capture user default here
+        UserDefaults.standard.set(Int(lossFactorLabel.text!), forKey: "conversionFactor")
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //setting user default for conversion factor
+        if let x = UserDefaults.standard.object(forKey: "conversionFactor") as? Int {
+            lossFactorLabel.text = String(x)
+        } else {
+            lossFactorLabel.text = "70"
+        }
         
         //disssapearing text field input
         //TODO add the rest of the inputs (maybe?)
@@ -96,9 +105,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         if theThc != 0 && theWeight != 0 && desiredMgPerDose != 0 {
             let numberOfSplits = ((theThc * 0.01) * (theWeight * 1000.0) * lossFactor) / desiredMgPerDose
-            display.text = "split it \(numberOfSplits) ways"
+            display.text = "\(String(format: "%.2f",numberOfSplits)) units of \(splitInput.text!)mg"
         } else{
-            display.text = "nope"
+            display.text = "please fill out all fields"
         }
         
         
