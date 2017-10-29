@@ -56,7 +56,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.thcInput.delegate = self
         
         
-        GoogleBannerView.adUnitID = "ca-app-pub-3940256099942544/6300978111"
+        GoogleBannerView.adUnitID = "ca-app-pub-4186253562269967/1810673377"
         GoogleBannerView.rootViewController = self
         GoogleBannerView.load(GADRequest())
         // Do any additional setup after loading the view, typically from a nib.
