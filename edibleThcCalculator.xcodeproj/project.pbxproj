@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D01252F21FA5012A00277BCF /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01252F11FA5012A00277BCF /* OnboardingVC.swift */; };
 		D0231ADB1F79E7BB004DBD1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0231ADA1F79E7BB004DBD1C /* AppDelegate.swift */; };
 		D0231ADD1F79E7BB004DBD1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0231ADC1F79E7BB004DBD1C /* ViewController.swift */; };
 		D0231AE01F79E7BB004DBD1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0231ADE1F79E7BB004DBD1C /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D01252F11FA5012A00277BCF /* OnboardingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
 		D0231AD71F79E7BB004DBD1C /* edibleThcCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = edibleThcCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0231ADA1F79E7BB004DBD1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0231ADC1F79E7BB004DBD1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				D0231ADA1F79E7BB004DBD1C /* AppDelegate.swift */,
 				D0231ADC1F79E7BB004DBD1C /* ViewController.swift */,
 				D0231ADE1F79E7BB004DBD1C /* Main.storyboard */,
+				D01252F11FA5012A00277BCF /* OnboardingVC.swift */,
 				D07C27B11F7C62F50064E5ED /* PopUpViewController.swift */,
 				D0231AE11F79E7BB004DBD1C /* Assets.xcassets */,
 				D0231AE31F79E7BB004DBD1C /* LaunchScreen.storyboard */,
@@ -201,6 +204,7 @@
 			files = (
 				D0A735581FA19CBC0091F93B /* MaxLengthTextField.swift in Sources */,
 				D0231ADD1F79E7BB004DBD1C /* ViewController.swift in Sources */,
+				D01252F21FA5012A00277BCF /* OnboardingVC.swift in Sources */,
 				D07C27B21F7C62F50064E5ED /* PopUpViewController.swift in Sources */,
 				D0231ADB1F79E7BB004DBD1C /* AppDelegate.swift in Sources */,
 			);

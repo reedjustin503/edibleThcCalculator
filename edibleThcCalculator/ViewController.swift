@@ -43,7 +43,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         //disssapearing text field input
-        //TODO add the rest of the inputs (probably)
+        //TODO add the rest of the inputs (maybe?)
         self.thcInput.delegate = self
         
         
@@ -52,10 +52,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         GoogleBannerView.load(GADRequest())
         // Do any additional setup after loading the view, typically from a nib.
      }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        createAlert(title: "Are you 21 or over?", message: "-")
-    }
     
     
     
