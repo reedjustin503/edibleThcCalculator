@@ -105,7 +105,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         if theThc != 0 && theWeight != 0 && desiredMgPerDose != 0 {
             let numberOfSplits = ((theThc * 0.01) * (theWeight * 1000.0) * lossFactor) / desiredMgPerDose
-            display.text = "\(String(format: "%.2f",numberOfSplits)) units of \(splitInput.text!)mg"
+            let thcMgTotal = ((theThc * 0.01) * (theWeight * 1000.0) * lossFactor)
+            
+            display.text = "\(String(format: "%.2f",thcMgTotal))mg thc total. \(String(format: "%.2f",numberOfSplits)) units of \(splitInput.text!)mg"
         } else{
             display.text = "please fill out all fields"
         }

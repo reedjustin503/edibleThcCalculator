@@ -30,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //show main screen
             vc = storyboard.instantiateInitialViewController()!
             
+
             
             
         }
