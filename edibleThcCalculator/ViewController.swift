@@ -11,19 +11,6 @@ import GoogleMobileAds
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
-    func createAlert (title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
-        
-        //creating a button
-        alert.addAction(UIAlertAction(title: "yes", style: UIAlertActionStyle.default, handler: { (action) in alert.dismiss(animated: true, completion: nil)
-            print("yes")
-        }))
-        
-        alert.addAction(UIAlertAction(title: "no", style: UIAlertActionStyle.default, handler: { (action) in alert.dismiss(animated: true, completion: nil)
-            print("no")
-        }))
-        self.present(alert, animated: true, completion: nil)
-    }
     
     @IBOutlet weak var GoogleBannerView: GADBannerView!
        
@@ -36,7 +23,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var lossFactorLabel: UILabel!
     @IBAction func slider(_ sender: UISlider) {
         lossFactorLabel.text = String(Int(sender.value))
-        //TODO capture user default here
+        //capture user default here
         UserDefaults.standard.set(Int(lossFactorLabel.text!), forKey: "conversionFactor")
     }
     
@@ -51,9 +38,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             lossFactorLabel.text = "70"
         }
         
-        //disssapearing text field input
-        //TODO add the rest of the inputs (maybe?)
-        self.thcInput.delegate = self
+        
         
         
         GoogleBannerView.adUnitID = "ca-app-pub-4186253562269967/1810673377"
