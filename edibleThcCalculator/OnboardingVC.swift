@@ -12,28 +12,15 @@ import UIKit
 
 class OnboardingVC: UIViewController  {
     
-    func createAlert (title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+    @IBAction func yesTouched(_ sender: UIButton) {
         
-        //creating a button
-        alert.addAction(UIAlertAction(title: "yes", style: UIAlertActionStyle.default, handler: { (action) in alert.dismiss(animated: true, completion: nil)
-            //send to the main view and store a string in user defaults
-            UserDefaults.standard.set("placeholder", forKey: "name")
-            performSegue(withIdentifier: "toMainSegue", sender: OnboardingVC)
-            print("yes")
-        }))
-        
-        alert.addAction(UIAlertAction(title: "no", style: UIAlertActionStyle.default, handler: { (action) in alert.dismiss(animated: true, completion: nil)
-            //send to dead page and do nothing
-            print("no")
-        }))
-        self.present(alert, animated: true, completion: nil)
+        UserDefaults.standard.set("placeholder", forKey: "name")
+        performSegue(withIdentifier: "toMainSegue", sender: self)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        createAlert(title: "Are you 21 or over?", message: "-")
+    @IBAction func noTouched(_ sender: UIButton) {
+        performSegue(withIdentifier: "toPurgatoryVC", sender: self)
     }
-    
 
     
     override func didReceiveMemoryWarning() {

@@ -22,7 +22,7 @@
         <!--View Controller-->
         <scene sceneID="qJs-E2-s3a">
             <objects>
-                <viewController id="SuL-nQ-CDD" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="purgatory" id="SuL-nQ-CDD" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Noe-Ck-pGs"/>
                         <viewControllerLayoutGuide type="bottom" id="dJI-MK-RTU"/>
@@ -58,18 +58,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How do you know your really asleep?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiE-1m-xAT">
-                                <rect key="frame" x="46" y="292" width="282" height="117"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Are you 21 years of age or older?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiE-1m-xAT">
+                                <rect key="frame" x="62" y="198" width="251" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyi-tN-q98">
+                                <rect key="frame" x="62" y="318" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="YES"/>
+                                <connections>
+                                    <action selector="yesTouched:" destination="cc5-o8-0Ac" eventType="touchUpInside" id="Y53-dz-Zpl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="weq-Ul-Hfy">
+                                <rect key="frame" x="267" y="317" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="NO"/>
+                                <connections>
+                                    <action selector="noTouched:" destination="cc5-o8-0Ac" eventType="touchUpInside" id="Viy-hV-fPx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="toMainSegue" id="XsJ-em-NzL"/>
+                        <segue destination="SuL-nQ-CDD" kind="show" identifier="toPurgatoryVC" id="vE6-B7-RSb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lsq-bw-9UV" userLabel="First Responder" sceneMemberID="firstResponder"/>

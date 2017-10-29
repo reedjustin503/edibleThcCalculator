@@ -29,6 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else{
             //show main screen
             vc = storyboard.instantiateInitialViewController()!
+            
+            
         }
         
         self.window?.rootViewController = vc
