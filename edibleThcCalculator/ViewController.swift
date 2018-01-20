@@ -11,16 +11,17 @@ import GoogleMobileAds
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
-    
+    //Set up connected variables for edible calculation
     @IBOutlet weak var GoogleBannerView: GADBannerView!
-       
-
     @IBOutlet weak var thcInput: UITextField!
-    @IBOutlet weak var weightInput: UITextField!
-    @IBOutlet weak var splitInput: UITextField!
-    @IBOutlet weak var display: UILabel!
+    @IBOutlet weak var weight: MaxLengthTextField!
+    @IBOutlet weak var unitsInBatch: MaxLengthTextField!
     
+
+    @IBOutlet weak var display: UILabel!
     @IBOutlet weak var lossFactorLabel: UILabel!
+    
+    //Method to update the value for the conversion slider.
     @IBAction func slider(_ sender: UISlider) {
         lossFactorLabel.text = String(Int(sender.value))
         //capture user default here
@@ -40,15 +41,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         
         
+        // TEST Google Ad Mob AdUNIT
+        GoogleBannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         
-        GoogleBannerView.adUnitID = "ca-app-pub-4186253562269967/1810673377"
+        // Real Google Ad Mob AdUNIT
+        //GoogleBannerView.adUnitID = "ca-app-pub-4186253562269967/1810673377"
+        
+        
         GoogleBannerView.rootViewController = self
         GoogleBannerView.load(GADRequest())
         // Do any additional setup after loading the view, typically from a nib.
      }
     
     
-    
+    // Move to the information storyboard using a segue
     @IBAction func showPopUp(_ sender: UIButton) {
         let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "popUpId") as! PopUpViewController
         self.addChildViewController(popOverVC)
@@ -74,25 +80,25 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         
         var theWeight = Double()
-        if let weight = Double(weightInput.text!) {
+        if let weight = Double(weight.text!) {
             theWeight = weight
         } else {
             theWeight = 0
         }
         
-        var desiredMgPerDose = Double()
-        if let mgPerDose = Double(splitInput.text!) {
-            desiredMgPerDose = mgPerDose
+        var currentMGPerDose = Double()
+        if let mgPerDose = Double(unitsInBatch.text!) {
+            currentMGPerDose = mgPerDose
         } else {
-            desiredMgPerDose = 0
+            currentMGPerDose = 0
         }
         
         
-        if theThc != 0 && theWeight != 0 && desiredMgPerDose != 0 {
-            let numberOfSplits = ((theThc * 0.01) * (theWeight * 1000.0) * lossFactor) / desiredMgPerDose
+        if theThc != 0 && theWeight != 0 && currentMGPerDose != 0 {
+            let numberOfSplits = (((theThc * 0.01) * (theWeight * 1000.0)) * lossFactor) / currentMGPerDose
             let thcMgTotal = ((theThc * 0.01) * (theWeight * 1000.0) * lossFactor)
             
-            display.text = "\(String(format: "%.2f",thcMgTotal))mg thc total. \(String(format: "%.2f",numberOfSplits)) units of \(splitInput.text!)mg"
+            display.text = "\(String(format: "%.2f",thcMgTotal))mg thc total. \(String(format: "%.2f",numberOfSplits)) mg in \(unitsInBatch.text!) units"
         } else{
             display.text = "please fill out all fields"
         }
