@@ -19,6 +19,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
 
     @IBOutlet weak var display: UILabel!
+    @IBOutlet weak var totalDisplay: UILabel!
+    
     @IBOutlet weak var lossFactorLabel: UILabel!
     
     //Method to update the value for the conversion slider.
@@ -98,7 +100,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
             let numberOfSplits = (((theThc * 0.01) * (theWeight * 1000.0)) * lossFactor) / currentMGPerDose
             let thcMgTotal = ((theThc * 0.01) * (theWeight * 1000.0) * lossFactor)
             
-            display.text = "\(String(format: "%.2f",thcMgTotal))mg thc total. \(String(format: "%.2f",numberOfSplits)) mg in \(unitsInBatch.text!) units"
+            totalDisplay.text = "\(String(format: "%.2f",thcMgTotal))mg thc total."
+            display.text = "\(unitsInBatch.text!) units with \(String(format: "%.2f",numberOfSplits)) mg in each dose"
         } else{
             display.text = "please fill out all fields"
         }
