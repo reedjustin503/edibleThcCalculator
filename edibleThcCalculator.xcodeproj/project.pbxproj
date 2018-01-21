@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		662F30C320153B5E00293FC6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 662F30C220153B5E00293FC6 /* MapKit.framework */; };
 		D01252F21FA5012A00277BCF /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01252F11FA5012A00277BCF /* OnboardingVC.swift */; };
 		D0231ADB1F79E7BB004DBD1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0231ADA1F79E7BB004DBD1C /* AppDelegate.swift */; };
 		D0231ADD1F79E7BB004DBD1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0231ADC1F79E7BB004DBD1C /* ViewController.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		662F30C220153B5E00293FC6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D01252F11FA5012A00277BCF /* OnboardingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
 		D0231AD71F79E7BB004DBD1C /* edibleThcCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = edibleThcCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0231ADA1F79E7BB004DBD1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				662F30C320153B5E00293FC6 /* MapKit.framework in Frameworks */,
 				D07E6BCA1F8197680009A822 /* GoogleMobileAds.framework in Frameworks */,
 				D07E6BC71F8196440009A822 /* SystemConfiguration.framework in Frameworks */,
 				D07E6BC51F81963C0009A822 /* StoreKit.framework in Frameworks */,
@@ -113,6 +116,7 @@
 		D07E6BB11F8195EE0009A822 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				662F30C220153B5E00293FC6 /* MapKit.framework */,
 				D07E6BC81F81973B0009A822 /* GoogleMobileAds.framework */,
 				D07E6BC61F8196440009A822 /* SystemConfiguration.framework */,
 				D07E6BC41F81963C0009A822 /* StoreKit.framework */,
@@ -163,6 +167,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 6SFM579B5E;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
